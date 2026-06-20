@@ -18,8 +18,13 @@ class Employee:
         self.employee_id = employee_id
         self.role = role
         self.base_salary = base_salary
+    
+class PortfolioManager(Employee):
+    def __init__ (self,name, employee_id, role, base_salary, aum):
+        super().__init__(name, employee_id, role, base_salary)
+        self.aum = aum
        
 
-employee_one = Employee("Dany", "157345", "Portfolio Manager", 2000)
-print(f"{employee_one.name} Salary is {employee_one.base_salary}")
+pm_dany = PortfolioManager("Dany", "157345", "Portfolio Manager", 2000, 50000000)
+print(f"{pm_dany.name} Salary is {pm_dany.base_salary} and he manage {pm_dany.aum}")
     
